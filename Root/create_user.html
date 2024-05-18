@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Craete User</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      * {
+        background-color: rgb(10, 10, 51);
+        box-sizing: border-box;
+        color: white;
+      }
+      .header {
+        overflow: hidden;
+        padding: 20px 10px;
+        border-radius: 3%;
+        background-color: rgb(76, 15, 189);
+      }
+      h1 {
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        text-align: center;
+        margin: 40px 0;
+        font-size: 290%;
+      }
+      .header a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
+
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .header a:hover {
+        background-color: white;
+        color: rgb(10, 10, 51);
+      }
+
+      .header a.active {
+        background-color: dodgerblue;
+        color: white;
+      }
+
+      .header-right {
+        float: right;
+      }
+
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+        .header-right {
+          float: none;
+        }
+      }
+      .logo {
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+      h5 {
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        text-align: center;
+      }
+      fieldset {
+        text-align: center;
+        width: 50%;
+        margin: 0 auto 0 auto;
+        padding-left: 15p;
+      }
+      input {
+        background-color: white;
+        color: rgb(10, 10, 51);
+      }
+      .submit {
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 1px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Start  Header -->
+
+    <div class="header">
+      <a href="/Root/index.html" class="logo">Hassona Movies</a>
+      <div class="header-right">
+        <a href="/Root/index.html">Home</a>
+        <a href="#">Series</a>
+        <a href="#">Soon!</a>
+        <a href="#">Cartoon</a>
+        <a href="#" class="active">Sign Up / In</a>
+      </div>
+    </div>
+    <div style="padding-left: 20px">
+      <h1>New User</h1>
+    </div>
+    <!-- End Header -->
+
+    <form action="login.html">
+      <fieldset>
+        <legend>
+          <h5>&nbsp;&nbsp;&nbsp;Craete New User:&nbsp;&nbsp;&nbsp;</h5>
+        </legend>
+        <label for="fname">First name:</label>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Your First Name..."
+          required
+        /><br /><br />
+        <label for="lname">Last name:</label>
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Your Last Name..."
+          required
+        /><br /><br />
+        <label for="email"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@ex.com"
+          required
+        /><br /><br />
+        <label for="pass"> &nbsp;Password:</label>
+        <input
+          type="password"
+          id="pass"
+          name="password"
+          minlength="8"
+          placeholder="Enter Strong Pass"
+          required
+        /><br /><br />
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" required /><br />
+        <br />
+        <p style="display: inline">Gender:</p>
+        <input type="radio" id="male" name="gender" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" />
+        <label for="female">Female</label>
+        <br /><br />
+        <input type="checkbox" name="terms" id="Trm" required />
+        <label for="Trm"
+          ><em
+            >“I agree to the terms and conditions as set out by the user
+            agreement.”</em
+          ></label
+        >
+        <br /><br />
+        <input type="reset" value="Reset" class="submit" />
+        <input
+          type="submit"
+          value="Create User"
+          class="submit"/>
+      </fieldset>
+    </form>
+
+
+  </body>
+</html>
